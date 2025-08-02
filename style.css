@@ -1,0 +1,184 @@
+/* *{
+    margin :0 ;
+    padding : 0 ;
+   
+
+}
+body {
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   
+}
+
+.container {
+    height : 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    flex-wrap: wrap;
+    width: 300px;
+
+}
+.boxes {
+    height: 100px;
+    width: 100px;
+    color: blanchedalmond;
+    background-color: teal;
+    font-size: 35px;
+    font-weight: 600px;
+  border : 2px solid rgb(64, 224, 230);
+}
+#reset-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 15px 10px;
+    margin: 40px 38rem;
+    border-radius: 5px;
+    background-color: black;
+   
+}
+#new-btn {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 25px 40px;
+    margin: 20px 38rem;
+    border-radius: 5px;
+    background-color: black;
+
+
+}
+.winner1 {
+    font-size: 50px;
+    justify-content: center;
+    display: flex;
+    font-weight: 600;
+    height: 100px;
+}
+.hide {
+    display: none;
+}
+.msg-container {
+    height: 700px;
+} */
+
+/* Reset default styles */
+/* Base Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+ box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #dee2e6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Container for game */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Game board */
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 12px;
+  padding: 20px;
+}
+
+/* Each box */
+.boxes {
+  height: 100px;
+  width: 100px;
+  background-color: #007b8a;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, background-color 0.3s ease;
+}
+
+.boxes:hover {
+  background-color: #005f6a;
+  transform: scale(1.05);
+}
+
+/* Button styling */
+#reset-btn,
+#new-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #343a40;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #495057;
+  transform: scale(1.05);
+}
+
+/* Buttons aligned center */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Winner message */
+.winner1 {
+  font-size: 46px;
+  font-weight: 700;
+  color: #31353a;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Hide utility */
+.hide {
+  display: none;
+}
+
+/* Optional message container */
+.msg-container {
+  min-height: 60px;
+}
